@@ -2,6 +2,11 @@ source "https://rubygems.org"
 
 ruby "3.2.2"
 
+gem "annotate"
+gem "dartsass-rails"
+gem "devise"
+gem "haml-rails"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
@@ -47,6 +52,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem "faker"
 end
 
 group :development do
@@ -58,6 +64,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "erb2haml"
 end
 
 group :test do

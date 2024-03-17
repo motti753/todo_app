@@ -1,0 +1,14 @@
+// Sassy
+@use 'variables' as var;
+@use 'authentication';
+@use 'button';
+@use 'header';
+
+body {
+  font-size: 1rem;
+  font-family: Avenir;
+  padding: 0 5%;
+  position: relative;
+  height: 100%;
+  width: 90%;
+}

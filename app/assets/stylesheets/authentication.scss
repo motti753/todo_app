@@ -1,0 +1,27 @@
+@use 'variables' as var;
+
+.devise-title {
+  margin: 2em 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 1em;
+  width: 100%;
+
+  label {
+    align-self: flex-start;
+  }
+
+  .devise-field {
+    // align-self: flex-start;
+    background: rgb(244, 244, 244);
+    border: none;
+    border-radius: 8px;
+    height: 1.5em;
+    padding: var.$primary-pd;
+    width: 90%;
+  }
+}
