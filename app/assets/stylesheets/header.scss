@@ -1,0 +1,14 @@
+@use 'variables' as var;
+
+.header {
+  border-bottom: 3px solid rgb(244, 244, 244);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3em;
+
+  &_title {
+    font-size: 1.5em;
+    align-self: flex-start;
+  }
+}
