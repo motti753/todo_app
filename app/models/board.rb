@@ -14,5 +14,5 @@
 #  index_boards_on_user_id  (user_id)
 #
 class Board < ApplicationRecord
-  belong_to :user
+  belongs_to :user
 end

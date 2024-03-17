@@ -11,4 +11,8 @@
   %body
     %header.header
       .header_title Boards
+    - if flash.present?
+      .flash
+        - flash.each do |key, value|
+          %div{:class => key}= value
     = yield

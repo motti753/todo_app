@@ -1,0 +1,15 @@
+.container
+  %ul
+    - @card.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: card, local:true) do |f|
+    .field
+      = f.label :name, 'Name'
+      %br/
+      = f.text_field :name, class: 'form-field'
+    .field
+      = f.label :description, 'Description'
+      %br/
+      = f.text_area :description, class: 'form-field field-cust'
+    .actions
+      = f.submit 'Submit', class: 'btn'
