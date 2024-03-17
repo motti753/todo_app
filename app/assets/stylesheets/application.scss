@@ -1,1 +1,12 @@
 // Sassy
+@use 'variables' as var;
+@use 'authentication';
+@use 'button';
+
+body {
+  font-size: 1rem;
+  padding: 5%;
+  position: relative;
+  height: 100%;
+  width: 90%;
+}
