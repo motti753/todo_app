@@ -1,7 +1,7 @@
 @use 'variables' as var;
 
 .form-title {
-  margin: 2em 0;
+  margin: 2em 1em 0 0;
 }
 
 .field {
@@ -16,7 +16,6 @@
   }
 
   .form-field {
-    // align-self: flex-start;
     background: rgb(244, 244, 244);
     border: none;
     border-radius: 8px;

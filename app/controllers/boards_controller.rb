@@ -1,6 +1,10 @@
 class BoardsController < ApplicationController
   # before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create, :destroy]
+
+  def index
+    @boards = Board.all
+  end
 
   def new
     @board = current_user.boards.build
@@ -15,6 +19,12 @@ class BoardsController < ApplicationController
       flash.now[:error] = '保存できません。タイトルと説明を確かめてください'
       render :new
     end
+  end
+
+  def destroy
+    board = current_user.boards.find(params[:id])
+    board.destroy!
+    redirect_to root_path, status: :see_other
   end
 
   private

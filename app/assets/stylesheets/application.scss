@@ -4,6 +4,7 @@
 @use 'button';
 @use 'header';
 @use 'flash';
+@use 'card';
 
 body {
   font-size: 1rem;
@@ -12,4 +13,27 @@ body {
   position: relative;
   height: 100%;
   width: 90%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  margin: 0;
+}
+
+.content-custom {
+  border: 2px dashed #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  height: 10em;
+  width: 95%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }

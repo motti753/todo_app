@@ -1,0 +1,11 @@
+%h2.form-title All Boards
+.container
+  - @boards.each do |board|
+    = render 'board', board: board
+
+  - if user_signed_in?
+    = link_to new_board_path do
+      .content-custom
+        %p +Add new board
+  - else
+    = link_to new_user_session_path

@@ -23,4 +23,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :boards, dependent: :destroy
+
+  def has_create?(board)
+    boards.exists?(id: board.id)
+  end
 end
