@@ -1,7 +1,7 @@
 @use 'variables' as var;
 
-.devise-title {
-  margin: 2em 0;
+.form-title {
+  margin: 2em 1em 0 0;
 }
 
 .field {
@@ -15,13 +15,16 @@
     align-self: flex-start;
   }
 
-  .devise-field {
-    // align-self: flex-start;
+  .form-field {
     background: rgb(244, 244, 244);
     border: none;
     border-radius: 8px;
     height: 1.5em;
     padding: var.$primary-pd;
     width: 90%;
+  }
+
+  .form-field.field-cust{
+    height: 10em;
   }
 }
