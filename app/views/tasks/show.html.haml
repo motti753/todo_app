@@ -1,0 +1,22 @@
+.container
+  .task-head
+    %h2.task-title
+      = @task.name
+    - if user_signed_in? && current_user.has_task_create?(@task)
+      .dropdown
+        = image_tag 'Combined Shape.png', class: 'dropdtn'
+        .dropdown-content
+          = link_to 'Edit', edit_board_task_path(@task.id)
+          = link_to 'Delete', board_task_path(@task.id), data: {turbo_method: :delete, turbo_confirm: '本当に削除してもよろしいですか'}
+  - if @task.eyecatch&.attached?
+    .t-card-eyecatch
+      = image_tag @task.eyecatch
+  .task-desc
+    = @task.description
+
+  %h2.task-title Comment
+  - if user_signed_in?
+    -# 後々コメント作成ページへのリンクに置き換える
+    = link_to new_board_task_path do
+      .task-add-content
+        %p +Add new card

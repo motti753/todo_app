@@ -4,7 +4,9 @@
 @use 'button';
 @use 'header';
 @use 'flash';
-@use 'card';
+@use 'task_card';
+@use 'board_card';
+@use 'task';
 
 body {
   font-size: 1rem;

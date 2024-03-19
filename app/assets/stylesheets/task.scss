@@ -1,0 +1,39 @@
+@use 'variables' as var;
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+
+  &-count {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.task-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var.$primary-pd;
+
+  .task-title {
+    font-size: 24px;
+  }
+}
+
+.task-desc {
+  background: rgb(244, 244, 244);
+  border-radius: 8px;
+  padding: var.$primary-pd;
+}
+
+.task-add-content {
+  border: 2px dashed #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  height: 5em;
+  width: 95%;
+}

@@ -1,0 +1,24 @@
+= link_to board_task_path(id: task.id) do
+  .t-card
+    .t-card-cust
+      - if task.eyecatch&.attached?
+        .t-card-img-cust
+          = image_tag task.eyecatch
+    .t-card-content
+      .t-card-rigth
+        .t-card-column
+          .t-card-title
+            = task.name
+          .t-card-desc
+            = task.description
+        .t-card-detail
+          -# ここにコメントした人のアバターを表示させる
+          = image_tag task.user.avatar_img, class: 't-card-img'
+      .t-card-left
+        .comment-count
+          -# ここにcommentテーブルの件数を出力する
+          24
+        .comment-img
+          = image_tag 'message-square-outline.png'
+    -# .card-detail
+    -#   = image_tag board.user.avatar_image

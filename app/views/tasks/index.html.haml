@@ -1,0 +1,12 @@
+%h2.form-title
+  = @board.name
+.container
+  - @tasks.each do |task|
+    = render 'task', task: task
+
+  - if user_signed_in?
+    = link_to new_board_task_path do
+      .content-custom
+        %p +Add new card
+  - else
+    = link_to 'Sign_in', new_user_session_path
