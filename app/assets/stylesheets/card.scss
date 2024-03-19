@@ -30,13 +30,6 @@ $avatar-size: 32px;
       cursor: pointer;
       display: flex;
       font-size: 10px;
-      
-      img {
-        width: $avatar-size;
-        height: $avatar-size;
-        border-radius: 100%;
-        margin-right: 8px;
-      }
     }
   }
 
@@ -77,4 +70,11 @@ $avatar-size: 32px;
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.card-img {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: 100%;
+  margin-right: 8px;
 }

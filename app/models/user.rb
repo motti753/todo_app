@@ -22,9 +22,18 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
+  has_one_attached :avatar
   has_many :boards, dependent: :destroy
 
   def has_create?(board)
     boards.exists?(id: board.id)
+  end
+
+  def avatar_img
+    if avatar&.attached?
+      avatar
+    else
+      'default-avatar.png'
+    end
   end
 end

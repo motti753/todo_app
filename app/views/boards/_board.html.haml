@@ -7,12 +7,12 @@
         .card-desc
           = board.description
       .card-detail
-        = image_tag 'default-avatar.png'
-    .dropdown
-      = image_tag 'Combined Shape.png', class: 'dropbtn'
-      .dropdown-content
-        = link_to 'Edit', edit_board_path(board.id)
-        - if user_signed_in? && current_user.has_create?(board)
+        = image_tag board.user.avatar_img, class: 'card-img'
+    - if user_signed_in? && current_user.has_create?(board)
+      .dropdown
+        = image_tag 'Combined Shape.png', class: 'dropbtn'
+        .dropdown-content
+          = link_to 'Edit', edit_board_path(board.id)
           = link_to 'Delete', board_path(board.id), data: {turbo_method: :delete , turbo_confirm: '本当に削除してもよろしいですか'}
     -# .card-detail
     -#   = image_tag board.user.avatar_image

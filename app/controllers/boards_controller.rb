@@ -1,6 +1,7 @@
 class BoardsController < ApplicationController
   # before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :destroy]
+  before_action :set_board, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :destroy, :edit, :update]
 
   def index
     @boards = Board.all
@@ -21,6 +22,18 @@ class BoardsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @board.update(board_params)
+      redirect_to board_path(@board), notice: '更新できました'
+    else
+      flash.now[:error] = '更新できませんでした'
+      render :edit
+    end
+  end
+
   def destroy
     board = current_user.boards.find(params[:id])
     board.destroy!
@@ -30,5 +43,9 @@ class BoardsController < ApplicationController
   private
   def board_params
     params.require(:board).permit(:name, :description)
+  end
+
+  def set_board
+    @board = current_user.boards.find(params[:id])
   end
 end
