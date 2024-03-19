@@ -55,8 +55,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_19_021929) do
     t.string "name", null: false
     t.text "description", null: false
     t.bigint "user_id", null: false
+    t.bigint "board_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_tasks_on_board_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
