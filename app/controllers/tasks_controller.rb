@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :set_task, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @board = Board.find(params[:board_id])
@@ -29,8 +30,30 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @task.update(task_params)
+      redirect_to board_task_path(@task.id), notice: '更新しました', status: :see_other
+    else
+      flash.now[:error] = '更新できませんでした'
+      render :edit
+    end
+  end
+
+  def destroy
+    task = current_user.tasks.find(params[:id])
+    task.destroy!
+    redirect_to board_tasks_path(board_id: task.board_id), status: :see_other
+  end
+
   private
   def task_params
-    param = params.require(:task).permit(:name, :description)
+    param = params.require(:task).permit(:name, :description, :eyecatch)
+  end
+
+  def set_task
+    @task = current_user.tasks.find(params[:id])
   end
 end

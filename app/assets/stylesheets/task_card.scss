@@ -91,3 +91,12 @@
   border-radius: 100%;
   margin-right: 8px;
 }
+
+.t-card-eyecatch {
+  width: 100vw;
+
+  img {
+    width: 90vw;
+    object-fit: contain;
+  }
+}
