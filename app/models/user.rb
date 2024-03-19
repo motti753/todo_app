@@ -24,6 +24,7 @@ class User < ApplicationRecord
   
   has_one_attached :avatar
   has_many :boards, dependent: :destroy
+  has_many :tasks, dependent: :destroy
 
   def has_create?(board)
     boards.exists?(id: board.id)
