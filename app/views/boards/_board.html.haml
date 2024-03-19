@@ -1,14 +1,14 @@
-= link_to board_path(id: board.id) do
-  .card
-    .card-content
-      .card-column
-        .card-title
+= link_to board_tasks_path(board_id: board.id) do
+  .b-card
+    .b-card-content
+      .b-card-column
+        .b-card-title
           = board.name
-        .card-desc
+        .b-card-desc
           = board.description
-      .card-detail
-        = image_tag board.user.avatar_img, class: 'card-img'
-    - if user_signed_in? && current_user.has_create?(board)
+      .b-card-detail
+        = image_tag board.user.avatar_img, class: 'b-card-img'
+    - if user_signed_in? && current_user.has_board_create?(board)
       .dropdown
         = image_tag 'Combined Shape.png', class: 'dropbtn'
         .dropdown-content

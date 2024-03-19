@@ -26,8 +26,12 @@ class User < ApplicationRecord
   has_many :boards, dependent: :destroy
   has_many :tasks, dependent: :destroy
 
-  def has_create?(board)
+  def has_board_create?(board)
     boards.exists?(id: board.id)
+  end
+
+  def has_task_create?(task)
+    tasks.exists?(id: task.id)
   end
 
   def avatar_img

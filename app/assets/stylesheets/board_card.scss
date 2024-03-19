@@ -1,47 +1,44 @@
 @use 'variables' as var;
 
-$avatar-size: 32px;
-
-.card {
+.b-card {
   background: rgb(244, 244, 244);
   display: flex;
   justify-content: space-between;
   margin-top: .5em;
-  height: 8em;
+  padding: 1em;
   width: 90%;
 
   border-radius: 8px;
   padding: var.$primary-pd;
 
   &-content {
-    .card-column {
-      .card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .b-card-column {
+      .b-card-title {
         font-size: 24px;
       }
-      .card-desc {
+      .b-card-desc {
         font-size: 16px;
         margin-top: 1em;
         opacity: .4;
       }
     }
 
-    .card-detail {
+    .b-card-detail {
       padding-top: 12px;
       cursor: pointer;
       display: flex;
       font-size: 10px;
+      margin-top: 1em;
     }
   }
 
   .dropdown {
     position: relative;
     display: inline-block;
-
-    // .dropbtn {
-    //   position: absolute;
-    //   top: 10vh;
-    //   right: 90vw;
-    // }
   }
 }
 
@@ -72,9 +69,9 @@ $avatar-size: 32px;
   display: block;
 }
 
-.card-img {
-  width: $avatar-size;
-  height: $avatar-size;
+.b-card-img {
+  width: var.$avatar-size;
+  height: var.$avatar-size;
   border-radius: 100%;
   margin-right: 8px;
 }
