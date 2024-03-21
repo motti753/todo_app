@@ -15,8 +15,12 @@
     = @task.description
 
   %h2.task-title Comment
+  .comment-container
+    - @task.comments.each do |comment|
+      .comment-block
+        = image_tag comment.user.avatar_img, class: 't-card-img cust'
+        = comment.content
   - if user_signed_in?
-    -# 後々コメント作成ページへのリンクに置き換える
-    = link_to new_board_task_path do
+    = link_to new_board_task_comment_path(task_id: @task.id) do
       .task-add-content
-        %p +Add new card
+        %p +Add new comment

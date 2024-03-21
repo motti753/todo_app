@@ -1,0 +1,22 @@
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  .comment-block {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+    align-items: center;
+
+    .t-card-img.cust {
+      height: 48px;
+      width: 48px;
+    }
+
+    .comment-content {
+      font-size: 32px;
+    }
+  }
+}

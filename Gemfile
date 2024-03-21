@@ -2,10 +2,12 @@ source "https://rubygems.org"
 
 ruby "3.2.2"
 
+gem 'aws-sdk-s3', require: false
 gem "annotate"
 gem "binding_of_caller"
 gem "dartsass-rails"
 gem "devise"
+gem 'dotenv-rails'
 gem "haml-rails"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

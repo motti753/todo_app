@@ -36,6 +36,7 @@
         padding-top: 12px;
         cursor: pointer;
         display: flex;
+        justify-content: flex-start;
         font-size: 10px;
         margin-top: 1em;
       }
@@ -89,16 +90,30 @@
   width: var.$avatar-size;
   height: var.$avatar-size;
   border-radius: 100%;
-  margin-right: 8px;
+  text-align: right;
 }
 
-.t-card-eyecatch {
-  width: 100vw;
+.t-card-img-cust {
+  width: 100%;
+  height: 100%;
+  text-align: center;
 
   img {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 32px;
-    width: 90vw;
+    width: 90%;
+    height: 30%;
     object-fit: contain;
+  }
+}
+
+.t-card-eyecatch {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: 50%;
   }
 }
