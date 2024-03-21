@@ -9,6 +9,9 @@ gem "dartsass-rails"
 gem "devise"
 gem 'dotenv-rails'
 gem "haml-rails"
+gem 'net-imap'
+gem 'net-pop'
+gem 'net-smtp'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
