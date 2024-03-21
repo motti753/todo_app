@@ -2,7 +2,7 @@
   %ul
     - @task.errors.full_messages.each do |message|
       %li= message
-  = form_with(model: task, url: board_tasks_path(task.board), local:true) do |f|
+  = form_with(model: task, url: board_tasks_path(task.board_id), local:true) do |f|
     .field
       = f.label :eyecatch, 'Eycatch'
       = f.file_field :eyecatch

@@ -12,12 +12,11 @@
           .t-card-desc
             = task.description
         .t-card-detail
-          -# ここにコメントした人のアバターを表示させる
-          = image_tag task.user.avatar_img, class: 't-card-img'
+          - task.comments.each do |comment|
+            = image_tag comment.user.avatar_img, class: 't-card-img'
       .t-card-left
         .comment-count
-          -# ここにcommentテーブルの件数を出力する
-          24
+          = task.comment_count
         .comment-img
           = image_tag 'message-square-outline.png'
     -# .card-detail
