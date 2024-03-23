@@ -7,11 +7,7 @@ gem "annotate"
 gem "binding_of_caller"
 gem "dartsass-rails"
 gem "devise"
-gem 'dotenv-rails'
-gem "haml-rails"
-gem 'net-imap', require: false
-gem 'net-pop', require: false
-gem 'net-smtp', require: false
+gem "haml-rails”
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
@@ -59,6 +55,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
   gem "faker"
+  gem 'dotenv-rails'
 end
 
 group :development do

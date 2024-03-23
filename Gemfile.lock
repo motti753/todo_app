@@ -150,7 +150,15 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    google-protobuf (4.26.0)
+      rake (>= 13)
+    google-protobuf (4.26.0-aarch64-linux)
+      rake (>= 13)
     google-protobuf (4.26.0-arm64-darwin)
+      rake (>= 13)
+    google-protobuf (4.26.0-x86-linux)
+      rake (>= 13)
+    google-protobuf (4.26.0-x86_64-darwin)
       rake (>= 13)
     google-protobuf (4.26.0-x86_64-linux)
       rake (>= 13)
@@ -207,7 +215,15 @@ GEM
     net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.1)
+    nokogiri (1.16.3-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.3-arm-linux)
+      racc (~> 1.4)
     nokogiri (1.16.3-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.3-x86-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.3-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.3-x86_64-linux)
       racc (~> 1.4)
@@ -277,9 +293,25 @@ GEM
       racc (~> 1.5)
       sexp_processor (~> 4.16)
     rubyzip (2.3.2)
+    sass-embedded (1.72.0-aarch64-linux-gnu)
+      google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.72.0-aarch64-linux-musl)
+      google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.72.0-arm-linux-gnueabihf)
+      google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.72.0-arm-linux-musleabihf)
+      google-protobuf (>= 3.25, < 5.0)
     sass-embedded (1.72.0-arm64-darwin)
       google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.72.0-x86-linux-gnu)
+      google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.72.0-x86-linux-musl)
+      google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.72.0-x86_64-darwin)
+      google-protobuf (>= 3.25, < 5.0)
     sass-embedded (1.72.0-x86_64-linux-gnu)
+      google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.72.0-x86_64-linux-musl)
       google-protobuf (>= 3.25, < 5.0)
     selenium-webdriver (4.18.1)
       base64 (~> 0.2)
@@ -324,8 +356,20 @@ GEM
     zeitwerk (2.6.13)
 
 PLATFORMS
+  aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux
+  arm-linux-gnueabihf
+  arm-linux-musleabihf
   arm64-darwin
+  x86-linux
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
   x86_64-linux
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   annotate
@@ -343,9 +387,6 @@ DEPENDENCIES
   haml-rails
   importmap-rails
   jbuilder
-  net-imap
-  net-pop
-  net-smtp
   pg (~> 1.1)
   pry-byebug
   puma (>= 5.0)
