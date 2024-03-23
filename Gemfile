@@ -8,9 +8,6 @@ gem "binding_of_caller"
 gem "dartsass-rails"
 gem "devise"
 gem "haml-rails"
-gem 'net-imap', require: false
-gem 'net-pop', require: false
-gem 'net-smtp', require: false
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
