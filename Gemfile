@@ -7,7 +7,7 @@ gem "annotate"
 gem "binding_of_caller"
 gem "dartsass-rails"
 gem "devise"
-gem "haml-rails”
+gem "haml-rails"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
